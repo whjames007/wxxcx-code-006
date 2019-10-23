@@ -47,6 +47,7 @@ Page({
         authStatus: true,
         userInfo: app.globalData.userInfo
       })
+      this.bindGotoHome()
       console.info(log, name, '【当前瞬间，全局变量有用户信息，从全局变量获得用户信息】')
     } else if (this.data.canIUse) {
       console.info(log, name, '【当前瞬间，全局变量没有用户信息，等待小程序主体app回调】')
@@ -57,6 +58,7 @@ Page({
           userInfo: res.userInfo,
           authStatus: true
         })
+        this.bindGotoHome()
         console.info(log, name, '【回调后，本地就有了用户信息】')
       }
     } else {

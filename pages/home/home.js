@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {},
   },
 
   /**
@@ -15,7 +15,14 @@ Page({
    */
   onLoad: function (options) {
     let name = "【onLoad】"
-    app.methodGotoIndex()
+    app.userInfoReadyCallback2 = res => {
+      this.setData({
+        userInfo: res.userInfo,
+        authStatus: true
+      }) 
+      console.info(log, name, '【userInfoReadyCallback2回调后，本地就有了用户信息】', res.userInfo)
+    }
+    app.methodGotoIndex2()
   },
 
   /**

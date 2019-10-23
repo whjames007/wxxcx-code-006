@@ -4,7 +4,7 @@ App({
   globalData: {
     userInfo: null
   },
-  methodGotoIndex: function () {
+  methodGotoIndex: function() {
     let name = "【methodGotoIndex】"
     if (this.globalData.userInfo) {
       console.info(log, name, '【当前瞬间，全局变量有用户信息，可以停留】')
@@ -14,6 +14,34 @@ App({
         url: '../index/index'
       })
     }
+  },
+  methodGotoIndex2: function() {
+    let name = "【methodGotoIndex2】"
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          console.info(log, name, '【用户已经授权】')
+          wx.getUserInfo({
+            success: res => {
+              // 可以将 res 发送给后台解码出 unionId
+              this.globalData.userInfo = res.userInfo
+              console.info(log, name, '【获取用户信息并赋值到全局变量】')
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (this.userInfoReadyCallback2) {
+                console.info(log, name, '【执行回调userInfoReadyCallback2】')
+                this.userInfoReadyCallback2(res)
+              }
+            }
+          })
+        } else {
+          console.info(log, name, '【用户没有授权】', res)
+          wx.redirectTo({
+            url: '../index/index'
+          })
+        }
+      }
+    })
   },
   onLaunch: function() {
     let name = "【onLaunch】"

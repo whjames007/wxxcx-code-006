@@ -1,2 +1,10 @@
 <!--pages/home/home.wxml-->
 <text>程序首页面，敬请期待。。。</text>
+
+<view>
+
+  <view class="index-subview-style">
+    <image style="width: 10vw;" mode='widthFix' src="{{userInfo.avatarUrl}}"></image><view class="index-subview-style"> {{userInfo.nickName}} </view>
+  </view>
+  
+</view>
