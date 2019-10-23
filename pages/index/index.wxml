@@ -2,24 +2,32 @@
 
 <!-- <image src="https://img.yzcdn.cn/vant/apple-3.jpg" /> -->
 <!-- <text space="emsp">  很遗憾，您拒绝了授权。本程序需要您的授权才能登录哟。</text> -->
-
-<view  class="index-view-style">
+<view class="index-view-style">
+  <view>
+    <view class="index-subview-style">
+      <text>阿斯顿发斯蒂芬</text>
+    </view>
+    <view class="index-subview-style">
+      <image style="width: 100px;;" mode='widthFix' src="https://img.yzcdn.cn/vant/apple-3.jpg" />
+    </view>
+    <view class="index-subview-style">
+      <text>大师法师打发斯蒂芬</text>
+    </view>
+  </view>
+</view>
+<view class="index-view-style">
   <van-dialog title="授权提醒" show="{{dialogOpen}}" message="很遗憾，您刚刚拒绝了授权申请。本程序需要您的授权才能登录进入哟。"></van-dialog>
 
   <view wx:if="{{authStatus}}" bindtap="bindGotoHome">
-  <view>
-      <text space="emsp">  您好，{{userInfo.nickName}}，</text>
-    </view>
-    <view>
-      <text space="emsp">您已完成授权，请点击头像进入程序！</text>
-    </view>
-    <view>
-      <image mode='scaleToFill' src="{{userInfo.avatarUrl}}" />
-    </view>
+    <view class="index-subview-style"> 您好，{{userInfo.nickName}}用户， </view>
+    <view class="index-subview-style">
+      <image style="width: 100px;;" mode='widthFix' src="{{userInfo.avatarUrl}}" /> </view>
+    <view class="index-subview-style"> 您已完成授权，请点击头像进入程序！ </view>
   </view>
 
   <view wx:else>
-    <text space="emsp">你尚未授权，请点击以下按钮进行授权登录</text>
+    <view class="index-subview-style"> 尊敬的用户，您好！ </view>
+    <view class="index-subview-style"> 您尚未授权，请点击以下按钮进行授权登录： </view>
     <van-button type="info" icon="add-o" size="large" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindUserInfoRequest">微信授权登录</van-button>
   </view>
 </view>

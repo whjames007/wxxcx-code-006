@@ -1,11 +1,21 @@
 /**index.wxss**/
-.index-view-style{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.index-view-style {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.index-subview-style {
+  width: 100vw;
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
