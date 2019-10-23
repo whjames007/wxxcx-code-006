@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "van-dialog": "vant/dialog/index",
+    "van-popup": "vant/popup/index",
+    "van-button": "vant/button/index",
+    "van-icon": "vant/icon/index"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
