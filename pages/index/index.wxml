@@ -5,13 +5,16 @@
 <view class="index-view-style">
   <view>
     <view class="index-subview-style">
-      <text>阿斯顿发斯蒂芬</text>
+      <text>美雅小账本（微信小程序）</text>
     </view>
     <view class="index-subview-style">
       <image style="width: 100px;;" mode='widthFix' src="https://img.yzcdn.cn/vant/apple-3.jpg" />
     </view>
     <view class="index-subview-style">
-      <text>大师法师打发斯蒂芬</text>
+      <text>记录家庭收支的点点滴滴</text>
+    </view>
+    <view class="index-subview-style">
+      <text>V1.0.2</text>
     </view>
   </view>
 </view>
@@ -28,6 +31,6 @@
   <view wx:else>
     <view class="index-subview-style"> 尊敬的用户，您好！ </view>
     <view class="index-subview-style"> 您尚未授权，请点击以下按钮进行授权登录： </view>
-    <van-button type="info" icon="add-o" size="large" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindUserInfoRequest">微信授权登录</van-button>
+    <van-button type="info" icon="add-o" size="large" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindUserInfoRequest">授权微信登录</van-button>
   </view>
 </view>
