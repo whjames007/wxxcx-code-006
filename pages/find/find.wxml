@@ -1,0 +1,6 @@
+<!--pages/find/find.wxml--> 
+<text>发现页面，敬请期待。。。</text>
+<view>
+<van-button type="info">信息按钮</van-button>
+</view>
+<van-circle :value="{{ 30 }}" />

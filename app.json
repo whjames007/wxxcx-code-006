@@ -6,9 +6,12 @@
     "van-icon": "vant/icon/index"
   },
   "pages": [
+    "pages/home/home",
+    "pages/find/find",
+    "pages/order/order",
+    "pages/my/my",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/home/home"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,5 +19,26 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#3388FF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
 }

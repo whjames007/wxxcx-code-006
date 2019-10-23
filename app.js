@@ -4,6 +4,17 @@ App({
   globalData: {
     userInfo: null
   },
+  methodGotoIndex: function () {
+    let name = "【methodGotoIndex】"
+    if (this.globalData.userInfo) {
+      console.info(log, name, '【当前瞬间，全局变量有用户信息，可以停留】')
+    } else {
+      console.info(log, name, '【当前瞬间，全局变量没有用户信息，跳转】')
+      wx.redirectTo({
+        url: '../index/index'
+      })
+    }
+  },
   onLaunch: function() {
     let name = "【onLaunch】"
     // 展示本地存储能力

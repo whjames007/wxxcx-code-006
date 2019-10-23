@@ -1,6 +1,4 @@
-// pages/home/home.js
-const app = getApp()
-const log = "【home页面】"
+// pages/my/my.js
 Page({
 
   /**
@@ -14,8 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let name = "【onLoad】"
-    app.methodGotoIndex()
+
   },
 
   /**

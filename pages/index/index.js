@@ -12,8 +12,8 @@ Page({
   bindGotoHome: function() {
     let name = "【bindGotoHome】"
     console.info(log, name, '【跳转】')
-    wx.navigateTo({
-      url: '../home/home'
+    wx.switchTab({
+      url: '/pages/home/home'
     })
   },
   bindUserInfoRequest: function(e) {
