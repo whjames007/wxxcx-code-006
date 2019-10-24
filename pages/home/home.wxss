@@ -9,22 +9,19 @@
   height: 10vh;
   color: #fff;
   font-size: 12px;
-  background: #38f;
+  background: #1989fa;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0rpx 0rpx 5rpx 0rpx;
+  margin: 0rpx 0rpx 10rpx 0rpx;
 }
-.home-grid-view-style {
+.home-grid-button-style {
   height: 10vh;
-  width: 30vw;
-  color: #fff;
-  font-size: 12px;
-  background: #38f;
+  width: 30vw; 
+  background: #1989fa;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
 }
 
 .aaa1 {

@@ -1,0 +1,24 @@
+<!--pages/home/openAccount/openAccount.wxml-->
+<view class="app-view-title-style">
+  <van-icon name="smile" size="20" />
+  <text space="emsp"> 开个户口当户主 </text>
+  <van-icon name="smile" size="20" />
+</view>
+<view>
+  <van-tag mark>第一步：请输入户口名称</van-tag>
+  <van-cell-group>
+    <van-field bind:change="bindChangeName" value="{{accountName}}" required clearable label="户名：" placeholder="例如：赵王府、王家大院等" />
+  </van-cell-group>
+</view>
+
+<view>
+  <van-tag mark>第二步：请选择行政区域</van-tag>
+  <van-area bind:confirm="bindconfirmArea" area-list="{{ areaList }}" columns-num="{{ 2 }}" value="{{areaValue}}" />
+  <van-cell-group>
+    <van-field value="{{provinceName}}" required label="省份：" disabled/>
+    <van-field value="{{cityName}}" required label="城市：" disabled/>
+  </van-cell-group>
+</view>
+<van-button type="info" data-type="primary" size="large" icon="checked" bind:click="bindSubmmit">提交开户申请</van-button>
+ <van-notify id="van-notify" />
+ <van-toast id="van-toast" />

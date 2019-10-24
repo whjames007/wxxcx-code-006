@@ -1,5 +1,9 @@
 {
   "usingComponents": {
+    "van-toast": "vant/toast/index",
+    "van-notify": "vant/notify/index",
+    "van-field": "vant/field/index",
+    "van-area": "vant/area/index",
     "van-tag": "vant/tag/index",
     "van-card": "vant/card/index",
     "van-cell": "vant/cell/index",
@@ -14,12 +18,14 @@
     "van-icon": "vant/icon/index"
   },
   "pages": [
+    "pages/home/openAccount/openAccount",
     "pages/home/home",
     "pages/find/find",
     "pages/order/order",
     "pages/my/my",
     "pages/index/index",
     "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

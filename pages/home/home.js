@@ -23,6 +23,9 @@ Page({
   bindtapOpenAccount: function() {
     let name = "【bindtapOpenAccount】"
     console.info(log, name, '【开户方法】')
+    wx.navigateTo({
+      url: './openAccount/openAccount'
+    })
     // wx.switchTab({
     //   url: '/pages/home/home'
     // })

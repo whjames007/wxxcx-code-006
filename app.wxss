@@ -10,3 +10,14 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.app-view-title-style {
+  height: 5vh;
+  color: #fff;
+  font-size: 14px;
+  background: #1989fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rpx 0rpx 10rpx 0rpx;
+}

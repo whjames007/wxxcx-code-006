@@ -31,35 +31,28 @@
 <view>
   <van-grid column-num="3">
     <van-grid-item use-slot>
-      <view class="home-grid-view-style" bindtap="bindtapOpenAccount">
-        <van-icon name="like-o" />
-        <text>开户</text>
-      </view>
+      <van-button class="home-grid-button-style" type="info" icon="star" bind:click="bindtapOpenAccount">开户</van-button>
     </van-grid-item>
     <van-grid-item use-slot>
-      <view class="home-grid-view-style">
-        <van-icon name="friends-o" />
-        <text>入户</text>
-      </view>
+      <van-button class="home-grid-button-style" type="info" icon="like" bind:click="bindSubmmit">入户</van-button>
     </van-grid-item>
     <van-grid-item use-slot>
-      <view class="home-grid-view-style"><van-icon name="close" />销户</view>
+      <van-button class="home-grid-button-style" type="info" icon="fire" bind:click="bindSubmmit">销户</van-button>
     </van-grid-item>
   </van-grid>
   <van-grid column-num="3">
     <van-grid-item use-slot>
-      <view class="home-grid-view-style"><van-icon name="gold-coin-o" />记账</view>
+      <van-button class="home-grid-button-style" type="info" icon="balance-list" bind:click="bindtapOpenAccount">记账</van-button>
     </van-grid-item>
     <van-grid-item use-slot>
-      <view class="home-grid-view-style"><van-icon name="smile-o" />查账</view>
+      <van-button class="home-grid-button-style" type="info" icon="todo-list" bind:click="bindSubmmit">查账</van-button>
     </van-grid-item>
     <van-grid-item use-slot>
-      <view class="home-grid-view-style"><van-icon name="certificate" />销账</view>
+      <van-button class="home-grid-button-style" type="info" icon="graphic" bind:click="bindSubmmit">销账</van-button>
     </van-grid-item>
   </van-grid>
 </view>
-<view> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-</view>
+
 <!--公司新闻-->
 <van-cell-group>
   <van-cell value="更多" icon="tosend" is-link url="/pages/test/test">
