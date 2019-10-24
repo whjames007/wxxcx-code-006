@@ -1,1 +1,53 @@
 /* pages/home/home.wxss */
+
+.image-user-style {
+  width: 10vw;
+  border-radius: 50%;
+}
+
+.home-user-view-style {
+  height: 10vh;
+  color: #fff;
+  font-size: 12px;
+  background: #38f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rpx 0rpx 5rpx 0rpx;
+}
+.home-grid-view-style {
+  height: 10vh;
+  width: 30vw;
+  color: #fff;
+  font-size: 12px;
+  background: #38f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.aaa1 {
+  height: 10vh;
+  background: #38f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aaa2 {
+  height: 10vh;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aaa3 {
+  height: 10vh;
+  background: #468254;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

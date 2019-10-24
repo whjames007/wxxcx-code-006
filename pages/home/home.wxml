@@ -1,10 +1,73 @@
 <!--pages/home/home.wxml-->
-<text>程序首页面，敬请期待。。。</text>
-
+<!--用户信息展示区域-->
 <view>
-
-  <view class="index-subview-style">
-    <image style="width: 10vw;" mode='widthFix' src="{{userInfo.avatarUrl}}"></image><view class="index-subview-style"> {{userInfo.nickName}} </view>
-  </view>
-  
+  <van-row>
+    <van-col span="6">
+      <view class="aaa1">
+        <image class="image-user-style" mode='widthFix' src="{{userInfo.avatarUrl}}"></image>
+      </view>
+    </van-col>
+    <van-col span="6">
+      <view class="home-user-view-style">{{userInfo.nickName}}</view>
+    </van-col>
+    <van-col span="6">
+      <view class="home-user-view-style">游客</view>
+    </van-col>
+    <van-col span="6">
+      <view class="home-user-view-style">信息</view>
+    </van-col>
+  </van-row>
 </view>
+<!--广告轮播展示区域-->
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular indicator-active-color="#ED4014" previous-margin="50px" next-margin="50px">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" /> </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!--九宫格区域-->
+<view>
+  <van-grid column-num="3">
+    <van-grid-item use-slot>
+      <view class="home-grid-view-style" bindtap="bindtapOpenAccount">
+        <van-icon name="like-o" />
+        <text>开户</text>
+      </view>
+    </van-grid-item>
+    <van-grid-item use-slot>
+      <view class="home-grid-view-style">
+        <van-icon name="friends-o" />
+        <text>入户</text>
+      </view>
+    </van-grid-item>
+    <van-grid-item use-slot>
+      <view class="home-grid-view-style"><van-icon name="close" />销户</view>
+    </van-grid-item>
+  </van-grid>
+  <van-grid column-num="3">
+    <van-grid-item use-slot>
+      <view class="home-grid-view-style"><van-icon name="gold-coin-o" />记账</view>
+    </van-grid-item>
+    <van-grid-item use-slot>
+      <view class="home-grid-view-style"><van-icon name="smile-o" />查账</view>
+    </van-grid-item>
+    <van-grid-item use-slot>
+      <view class="home-grid-view-style"><van-icon name="certificate" />销账</view>
+    </van-grid-item>
+  </van-grid>
+</view>
+<view> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</view>
+<!--公司新闻-->
+<van-cell-group>
+  <van-cell value="更多" icon="tosend" is-link url="/pages/test/test">
+    <view slot="title">
+      <span style="margin:0rpx 20rpx 0rpx 10rpx;">公司新闻</span>
+      <van-tag type="success">实时</van-tag>
+    </view>
+  </van-cell>
+</van-cell-group>
+<van-card title="正维参加2017 MWCA" centered price="2017-09-21" currency="" thumb-link="/pages/test/test" desc="9月12日，为期三天的2017世界移动通信大会美洲展（MWCA）在美国旧金山开幕。" thumb="http://www.gewei-wh.com/imageRepository/6179bfaa-b9c9-4f57-b014-77928b2a6ca1.png" />
+<van-card title="不使用冲突矿物质政策" centered price="2016-08-15" currency="" thumb-link="/pages/test/test" desc="“冲突矿物”：在刚果（金）及其周围国家和地区境内的锡石、黑钨、钶钽、铁矿" thumb="http://www.gewei-wh.com/imageRepository/5f8fb242-eec6-4fbb-a2e8-f67ab20377ab.jpg" />
